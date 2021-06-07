@@ -4,15 +4,15 @@
     kind: ConfigMap
     metadata:
       name: kube-monkey-config-map
-      namespace: kube-system
+      namespace: dataset-110474
     data:
       config.toml: |
         [kubemonkey]
-        run_hour = 20
-        start_hour = 21
+        run_hour = 0
+        start_hour = 1
         end_hour = 23
-        blacklisted_namespaces = ["kube-system"]
-        whitelisted_namespaces = [ "default", "test-kill-namespace" ]
+        blacklisted_namespaces = ["apollo","default","elastic-system","ingress","kube-node-lease","kube-public","kube-system"]
+        whitelisted_namespaces = [ "dataset-110474", "test-kill-namespace" ]
         time_zone = "Australia/Melbourne"
         graceperiod_sec= 10
         [notifications]

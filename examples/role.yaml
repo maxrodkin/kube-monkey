@@ -1,0 +1,10 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: null
+  name: chaos-monkey
+  namespace: dataset-110474
+rules:
+- apiGroups: ["", "apps"]
+  resources: ["pods","pods/status","deployments","deployments/status","statefulsets","statefulsets/status","daemonsets","daemonsets/status"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]

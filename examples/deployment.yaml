@@ -3,7 +3,7 @@
   kind: Deployment
   metadata:
     name: kube-monkey
-    namespace: kube-system
+    namespace: dataset-110474
   spec:
     replicas: 1
     selector:
